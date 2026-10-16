@@ -1,0 +1,6 @@
+{
+  "name": "Dragon x Deus: Everworld 6",
+  "description": "A persistent digital twin engine and world substrate for entities, causal memory, dynamic simulations, and evolving systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
