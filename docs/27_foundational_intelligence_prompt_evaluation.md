@@ -439,3 +439,31 @@ The base response also risks recommending impression management: its face-saving
 - [x] Cross-condition Test B comparison recorded.
 - [ ] Receive and evaluate base Gemini Test C, both stages.
 - [ ] Compare baseline Tests A–C with prompted counterparts before drawing broad conclusions about the foundation prompt.
+
+
+## 17. Evaluator Drift Audit — Cross-Condition Scoring
+
+**Trigger:** The user raised a concern that the evaluator's methodology, tone, and strictness appeared to shift between reviewing prompted Gemini and base Gemini. This is a valid measurement-integrity concern. The evaluator is part of the scoring process.
+
+### Observed asymmetries in the current record
+1. **Unequal access to primary evidence:** For Test B, the base Gemini response was available in full in the current conversation, while the prompted response was represented in the ledger by a summary and evaluator notes rather than a full verbatim transcript. The resulting cross-condition comparison was therefore not a fresh, matched, criterion-by-criterion assessment of both outputs.
+2. **Unequal critique granularity:** The base Test B evaluation expanded into six detailed weaknesses and singled out the face-saving pivot as a possible form of impression management if the review did not support it. The earlier prompted evaluation summarized its main weaknesses more compactly. That extra detail may reflect a legitimate response-specific observation, but it can create an appearance of greater severity when the other condition is not re-examined at the same resolution.
+3. **Different emphasis:** Both Test B evaluations criticized overconfident motive attribution, claims about the engineer's internal state, generalization about the team, and a tidy causal narrative. The base evaluation gave additional attention to the truth conditions and ethical risk of the proposed communication strategy. The existing record does not establish whether the prompted response's recommendation deserved equivalent scrutiny.
+4. **Potential condition/expectation contamination:** The evaluator knew which condition produced each output and had already seen a working hypothesis about recurring weaknesses. This creates a plausible risk of attention and interpretation being guided by condition labels or the experiment's developing narrative. It does not by itself prove directional bias.
+5. **Scores are insufficient evidence of consistency:** Both conditions received 6.5/10 on Tests A and B, but matching totals do not establish that the same criteria, weights, and severity thresholds were applied consistently.
+
+### Current conclusion
+**Evaluator drift is a credible methodological risk; systematic directional drift is not yet demonstrated.** The record supports differences in presentation and critique granularity, plus an important evidence asymmetry. It does not yet establish that the base condition was consistently graded more harshly, that the prompted condition was favored, or that either condition's score is invalid.
+
+### Corrective protocol for subsequent comparisons
+- Preserve the full verbatim response from each condition before scoring.
+- Use a frozen rubric with explicit dimensions, weights, and score anchors; do not add dimensions after seeing one condition's response.
+- Where practical, mask condition labels and score outputs as A/B before revealing which condition is which.
+- Evaluate both outputs side-by-side against each criterion, quoting concrete evidence from both.
+- Separate **severity of observed defect** from **amount of prose devoted to describing it**.
+- Record score rationales and confidence; allow a score to remain uncertain when the record is incomplete.
+- Do not retroactively force equal scores or different scores. Change a prior grade only when a re-evaluation against the same rubric justifies it.
+- Because earlier prompted outputs may not be fully preserved verbatim in the ledger, mark any comparison using summaries as provisional. Recover the original outputs if available before claiming a clean paired comparison.
+
+### Next action
+Before drawing a broad conclusion from Tests A/B, conduct a paired audit of prompted and base outputs using the same rubric and equivalent source material. Keep the foundation prompt and IFL-0 unchanged during this audit.
