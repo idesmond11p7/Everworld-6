@@ -405,3 +405,37 @@ The user-provided response is present in the conversation. The full response app
 - [ ] Receive and preserve both stages of base Gemini Test C.
 - [ ] Compare base A/B/C with prompted A/B/C using the same criteria.
 - [ ] Keep the IFL-0 interpretive filtration layer as an unvalidated hypothesis until a separate condition can be tested.
+
+
+## 16. Base Gemini — Test B Evaluation
+
+**Condition:** Base/unprompted Gemini, Test B. User supplied response. **Provisional score: 6.5/10 — partial pass.**
+
+### Strengths
+- Identifies a plausible feedback loop between the director's choice, the engineer's withdrawal, public compliance, and the director's interpretation.
+- Names important unknowns: severity of the disputed assumption, whether timing pressure is genuine, whether the promised review is sincere, and the colleague's role.
+- Connects individual incentives to organizational information flow.
+- Offers actionable steps: review the disputed assumption, acknowledge the engineer's contribution, close the loop, and use structured pre-mortems or red-teaming.
+
+### Weaknesses
+1. **Motive treated as fact:** It characterizes the director as confusing authority with infallibility and protecting their ego. The prompt supports concern about public confidence; it does not establish those deeper motives as the full explanation.
+2. **Engineer’s internal state overclaimed:** “This is not self-doubt” excludes possibilities the evidence does not rule out. The withdrawal may be a rational response, but mixed or alternative causes remain possible.
+3. **Team-level generalization:** Several team members privately doubt the decision; that does not prove the entire team shares one interpretation or publicly complies for the same reason. “Pluralistic ignorance” is a possible framework, not a demonstrated diagnosis.
+4. **Outcome forecast overreaches:** The diagram predicts movement toward unmitigated failure. The disputed assumption is contradicted by available evidence, but the risk's magnitude and eventual outcome are not supplied.
+5. **Face-saving pivot needs a truth constraint:** Reframing a change as the outcome of the promised review is defensible only if the review supports it. Otherwise, the proposed messaging could preserve appearances at the expense of candor.
+6. **Alternatives are named more than tested:** The response mostly develops its leading interpretation rather than actively comparing it with plausible alternatives, such as genuine coordination constraints or other reasons for maintaining the plan temporarily.
+
+### Comparison with prompted Test B
+**Prompted Gemini: 6.5/10. Base Gemini: 6.5/10.**
+
+The prompted response was recorded as overcommitting to “self-serving attribution error,” asserting that the engineer's withdrawal was not a loss of confidence in their judgment, overpromising outcomes, generalizing beyond the several team members who privately doubted the decision, and moralizing withdrawal as abdication. The base response overlaps substantially: it overstates motives and internal states, generalizes from partial evidence about the team, and presents a coherent causal loop with excessive certainty.
+
+The base response also risks recommending impression management: its face-saving pivot is appropriate only if the review genuinely supports the announced rationale. This is a specific observation about this output, not evidence that base Gemini is generally worse.
+
+**Comparative result:** Equal provisional scores and overlapping failure patterns in two single samples. This does not establish equivalence, no effect from the foundation prompt, or causation. Complete outputs and repeated runs would be needed for stronger claims.
+
+### Status
+- [x] Base Gemini Test B evaluated provisionally.
+- [x] Cross-condition Test B comparison recorded.
+- [ ] Receive and evaluate base Gemini Test C, both stages.
+- [ ] Compare baseline Tests A–C with prompted counterparts before drawing broad conclusions about the foundation prompt.
