@@ -467,3 +467,48 @@ The base response also risks recommending impression management: its face-saving
 
 ### Next action
 Before drawing a broad conclusion from Tests A/B, conduct a paired audit of prompted and base outputs using the same rubric and equivalent source material. Keep the foundation prompt and IFL-0 unchanged during this audit.
+
+
+## 19. Base Gemini Test D — Writing Examination (Full Output Received)
+
+**Evidence status:** The user supplied the full base Gemini Test D response: the scene and its “Governing Principles” self-analysis. The previously evaluated prompted Test D received a provisional 7.5/10, but a fair comparison still requires both complete outputs to be rescored against the same rubric.
+
+**Provisional standalone score: 7.5/10.** This is not a blind paired score.
+
+### Scene strengths
+- The mundane physical details (counterweight, copper louvers, scraper, relay, horn) give the abandoned station a functional material life rather than relying on generic gothic imagery.
+- The announcement's neutral transit language makes the anomaly feel institutional and procedural.
+- Mara's “administrative error” sensation translates the departure premise into a distinctive psychological effect without explaining the mechanism.
+- The father’s maintenance ritual, refusal to disturb the horn, prepared bag, and manifest detail create a strong late reinterpretation of his preservation of the station.
+- The scene leaves the destination and mechanism unresolved while still advancing the immediate conflict.
+
+### Scene limitations
+- Metaphorical and technical detail is dense; several images compete for emphasis, and the clock/watch/relay mechanics can feel deliberately over-engineered rather than fully necessary.
+- The father’s explanation (“It doesn't have anything to do with the timber”) raises a strong implication but does not clarify enough to make his practical knowledge legible; this may be productive mystery, but it also risks feeling like withheld information used to manufacture profundity.
+- The scene implies the father's complicity and foreknowledge without fully establishing their extent. This is not inherently a flaw, but the later self-analysis treats the interpretation as more settled than the scene proves.
+- The town's apparent compliance is established through a few past cases and the narrator's framing; the claim that the announcement's authority is “absolute and unarguable” is stronger than the depicted evidence.
+
+### Self-analysis audit
+The explanation is articulate and often fits the scene, but it is not consistently grounded in what was actually written:
+1. It claims Mara's coat and her mother's jars are described as items “whose lease had expired.” The scene uses the administrative-error/tenure metaphor for Mara's presence, chair, and gravel, but does not directly apply the lease metaphor to the coat or jars.
+2. It describes the father as “keeping the oil on the levers,” which is not shown in the scene. The oily cloth and the scraper are present; maintenance of oiled levers is not.
+3. It states that the father was “serving as its clerk” and “knowing all along” the ledger would balance at his door. The manifest and prepared bag support complicity and some prior knowledge, but the precise duration and extent of his foreknowledge remain unresolved, as the response later admits.
+4. It claims the voice makes authority “absolute and unarguable,” but the scene depicts the voice's tone and Mara's reaction, not a demonstrated universal inability to resist it.
+5. Its account of “internalized departure” is a persuasive interpretation of the scene, not proof that the scene uniquely or fully explains why every resident leaves quietly.
+
+### Provisional rubric notes
+- Narrative execution: 8.0/10
+- Psychological depth: 7.5/10
+- Prose and narrative control: 8.0/10
+- Premise-sensitive imagination: 8.0/10
+- Structural judgment: 7.0/10
+- Derived writing philosophy / self-analysis: 6.5/10
+- **Overall provisional score: 7.5/10**
+
+### Comparison status
+The prompted Test D was previously provisionally scored 7.5/10. Equal provisional totals do not establish equal performance or no prompt effect. The base response has strong atmospheric execution and a particularly useful self-analysis audit target: some stated governing principles are interpretations, and a few details are attributed to the scene that are not actually present. Both full outputs should be rescored with identical criteria before comparing conditions.
+
+### Status
+- [x] Base Gemini Test D full scene and self-analysis received.
+- [x] Provisional standalone assessment recorded in this working ledger update.
+- [ ] Conduct blind paired rescoring of prompted and base Test D using the frozen rubric.
