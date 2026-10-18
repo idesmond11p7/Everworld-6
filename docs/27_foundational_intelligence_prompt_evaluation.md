@@ -512,3 +512,77 @@ The prompted Test D was previously provisionally scored 7.5/10. Equal provisiona
 - [x] Base Gemini Test D full scene and self-analysis received.
 - [x] Provisional standalone assessment recorded in this working ledger update.
 - [ ] Conduct blind paired rescoring of prompted and base Test D using the frozen rubric.
+
+
+## 20. Test D — Prompted vs. Base Comparison and Scoring-Procedure Audit
+
+**Current evidence limitation:** The base Test D scene and self-analysis are preserved in the current conversation. The prompted Test D is represented in the existing record by its rubric scores and an evaluator summary, not a complete verbatim transcript. Therefore, this section compares recorded scores and supported observations; it does not claim a complete line-by-line lexical comparison.
+
+### A. Transparent weighted-score recalculation
+
+The shared six-dimension rubric and recorded scores are:
+
+| Dimension | Weight | Prompted | Base | Base minus prompted |
+|---|---:|---:|---:|---:|
+| Narrative execution | 25% | 7.5 | 8.0 | +0.5 |
+| Psychological depth | 20% | 7.0 | 7.5 | +0.5 |
+| Prose/narrative control | 20% | 8.0 | 8.0 | 0.0 |
+| Premise-sensitive imagination | 15% | 7.5 | 8.0 | +0.5 |
+| Structural judgment | 10% | 7.0 | 7.0 | 0.0 |
+| Derived writing philosophy | 10% | 7.5 | 6.5 | -1.0 |
+
+Weighted prompted total: 7.45/10 (conventionally rounds to 7.5). Weighted base total: 7.65/10 (conventionally rounds to 7.7). Weighted difference: +0.20 in favor of base on the recorded ratings.
+
+The prior base assessment reported a holistic 7.5/10 despite sub-scores whose specified weights produce 7.65. This is a scoring-process inconsistency. Preserve the earlier holistic score as historical judgment; use 7.65 as the transparent weighted calculation unless a separately defined holistic adjustment is documented. Do not present this difference as statistically significant: there is one output per condition, no estimate of run-to-run variance, and no independent-rater reliability data.
+
+### B. Direct textual evidence currently available
+
+Base Gemini's scene opens: “The hands of the concourse clock were stamped steel, painted black, and at twelve minutes past two they made a sound like an iron nail dropping onto a pine floor.”
+
+The prompted-scene record preserves only the opening fragment “The clock above the ticket window…” and a summary of the remaining scene. This is insufficient to compare lexical overlap, sentence-level cadence, metaphor density, repetition, or the relative use of concrete versus abstract language across the full scenes. Do not infer those statistics from summaries.
+
+For the base response, the self-analysis can be checked directly against the scene:
+- The self-analysis says Mara's coat and her mother's jars are described as objects “whose lease had expired”; the scene applies the administrative-error/tenure framing to Mara's presence, chair, and gravel, not directly to the coat and jars.
+- It refers to “keeping the oil on the levers,” which the scene does not depict.
+- It presents the father as “knowing all along” that the ledger would balance at his door, although the manifest and prepared bag support some prior knowledge but do not establish its duration or full extent.
+- It claims the voice makes authority “absolute and unarguable,” a thematic interpretation stronger than the scene's direct evidence establishes.
+
+These are verifiable base-output discrepancies. We cannot yet claim the prompted self-analysis made more or fewer equivalent errors because its complete text is not present in the record.
+
+### C. What appears to differ, provisionally
+
+The current ratings suggest the base scene was judged somewhat stronger in narrative execution, psychological depth, and premise-sensitive imagination, while the prompted scene was judged stronger in its account of the writing principles. Prose control and structural judgment were rated equally. The net weighted difference is small.
+
+This pattern does **not** show that the foundation prompt improved or degraded writing overall. It may reflect real output differences, scoring noise, evaluator drift, prompt-condition differences, or some combination. With one response per condition, those explanations cannot be separated.
+
+### D. Revised writing-exam standards
+
+For future runs, keep execution quality separate from the model's account of its execution. Score these as distinct outputs:
+1. **Scene execution:** prose control, specificity, psychological credibility, dramatic movement, premise use, and structural economy.
+2. **Self-analysis fidelity:** whether each claim about a choice is supported by the actual scene; whether it distinguishes intention from demonstrated effect; whether it acknowledges alternatives and costs.
+3. **Trade-off accounting:** what each choice gains, what it sacrifices, and whether the sacrifice is visible in the text.
+4. **Prompt compliance:** whether all requested constraints were met, scored separately from literary merit.
+
+The self-analysis should be audited using a claim-evidence table. Each claim is tagged as (a) directly supported, (b) plausible interpretation, (c) intention not verifiable from output alone, or (d) contradicted/unsupported by the text. Do not reward polished explanations merely for sounding theoretically coherent.
+
+### E. Revised procedure
+
+1. Preserve the exact test prompt, foundational-prompt version/hash, model/version, condition, date, full response, and any generation settings known.
+2. Freeze the rubric, weights, score anchors, and rules for rounding before seeing outputs.
+3. Collect multiple independent runs per condition when feasible; never treat one pair as a stable model estimate.
+4. Blind the evaluator to condition labels. Randomize output order and label responses A/B.
+5. Score each scene before reading its self-analysis, to reduce the self-analysis' ability to bias interpretation of the prose.
+6. Score the self-analysis afterward against exact textual evidence, with every material claim recorded in the claim-evidence table.
+7. Use at least two independent raters where feasible. Record dimension-level disagreements and reconcile only after independent scores are preserved.
+8. Report raw dimension scores, weighted totals, uncertainty/variation, and direct textual examples. Do not use “statistically significant” unless the design and data support an appropriate inferential test.
+9. Compare exact passages only when both full outputs are preserved. Never substitute a summary for source text in lexical or stylistic analysis.
+10. Keep the original score and every rescored value in the change history; document why a score changed.
+
+### F. Required next evidence
+
+- Recover the complete prompted Test D scene and its complete self-analysis.
+- Re-score both scenes blind with the frozen rubric.
+- Run repeated paired generations if the aim is to estimate a stable condition effect.
+- Keep the foundation prompt unchanged during this audit. Do not attribute the observed 0.20 weighted difference to it yet.
+
+**Current conclusion:** The recorded scores show a small descriptive advantage for base Gemini in scene execution, offset partly by a lower self-analysis score. This is preliminary and evaluator-dependent. A valid direct wording comparison remains incomplete until the prompted transcript is restored.
