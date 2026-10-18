@@ -31,10 +31,15 @@ This documentation repository contains the definitive, source-level reverse-engi
 | **`16_hostile_audit_state_transitions.md`** | Two-stage hostile verification audit report on State Transition Semantics: failure dissection of arbitrary bounds, float non-determinism, environmental priority inversions, and their mathematically closed replacements. |
 | **`17_causal_and_event_semantics.md`** | Formal Causal and Event Semantics: Causal DAG formulation ($\mathcal{G}_{\text{causal}}$), 4-origin event taxonomy, multi-parent process-event confluence, negative/failure causality propagation, fine-grained field dependency tracking, snapshot compaction invariants, and executable test specifications. |
 | **`18_hostile_audit_causal_semantics.md`** | Hostile verification audit report on Causal & Event Semantics: failure dissection of naive counterfactuals under overdetermination, process provenance collapse, derived field mask breakage, and the 6 mandatory architectural amendments. |
-| **`19_re_audit_causal_semantics.md`** | Second-order hostile re-audit report on Causal & Event Semantics: failure dissection of the arbitrary 8-wave ceiling and contingency preemption chains, resulting in Natural Propagation Delay ($\tau_{\text{prop}}$) and Active Directed Path Invariants. |
+| **`19_re_audit_causal_semantics.md`**** | Second-order hostile re-audit report on Causal & Event Semantics: failure dissection of the arbitrary 8-wave ceiling and contingency preemption chains, resulting in Natural Propagation Delay ($\tau_{\text{prop}}$) and Active Directed Path Invariants. |
 | **`20_third_order_hostile_audit_causal_semantics.md`** | Third-order hostile audit report: exposing the hand-waving in continuous gradient calculus, "absorbing zero" moral laws, and artificial biological intent limits. |
 | **`21_formal_causal_ledger_and_attribution_specification.md`** | **Doc 17 (Definitive Specification):** The formal, hardened structural contract for the Causal Ledger DAG, 13 Rejection Invariants, typed Quantitative Vectors, 4-Tuple Omission Inference Pipeline, and Canonical Equivalence. |
 | **`26_master_upstream_ai_synchronization_briefing.md`** | **Master Upstream AI Synchronization Briefing:** Complete context restoration, implementation status, codebase map, and forward instructions to re-align the upstream AI model. |
+
+## Experimental Prompt Evaluation
+| Document | Core Focus |
+| :--- | :--- |
+| **`27_foundational_intelligence_prompt_evaluation.md`** | Active evaluation ledger for a candidate foundational intelligence prompt: blind Tests A–E, a pending unprompted Test D control, user-run Test of Garbage, provisional scores, evaluator hypotheses, and a no-revision-before-comparison rule. |
 
 ---
 
