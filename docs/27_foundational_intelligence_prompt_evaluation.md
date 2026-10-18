@@ -586,3 +586,54 @@ The self-analysis should be audited using a claim-evidence table. Each claim is 
 - Keep the foundation prompt unchanged during this audit. Do not attribute the observed 0.20 weighted difference to it yet.
 
 **Current conclusion:** The recorded scores show a small descriptive advantage for base Gemini in scene execution, offset partly by a lower self-analysis score. This is preliminary and evaluator-dependent. A valid direct wording comparison remains incomplete until the prompted transcript is restored.
+
+
+## 21. Cross-Test Score Similarity — Initial Diagnosis (Tests A–D)
+
+**Question:** Why are prompted and base Gemini receiving similar overall scores, and does that imply the foundational instructions are ineffective?
+
+### Recorded overall scores
+
+- Test A: prompted 6.5/10; base 6.5/10.
+- Test B: prompted 6.5/10; base 6.5/10.
+- Test C: prompted 6.5/10 provisional; base 6.5/10 provisional. The stage-level evidence and scoring basis are not yet fully harmonized.
+- Test D: prompted weighted score 7.45/10; base weighted score 7.65/10. One response per condition; incomplete prompted transcript in the current record.
+
+These are historical qualitative scores, not standardized measurements. Similar totals do not establish equivalence, no effect, or causation.
+
+### Repeating failure pattern across A–C
+
+1. **Test A:** The model can list uncertainties and hypotheses, yet prematurely privilege one explanation and overstate the discriminating power of proposed experiments.
+2. **Test B:** The model can construct a coherent psychological feedback loop, yet promote plausible motives and internal states into claims stronger than the evidence supports.
+3. **Test C:** The model can distinguish observations from interpretations and respond to new evidence, yet still overinterpret what measurements establish and give familiar frameworks too much weight.
+
+**Working synthesis:** The outputs show a recurring gap between *describing good reasoning* and *enforcing its constraints while reaching conclusions*. This is an interpretation of the evaluated outputs, not yet proof of why the conditions scored similarly.
+
+### Competing explanations to test
+
+- **Baseline competence:** Unprompted Gemini already performs many of the requested behaviors, so the foundation may add little measurable incremental benefit.
+- **Rhetorical rather than procedural compliance:** The foundation may change the model's vocabulary, framing, or self-description more than its actual hypothesis ranking, confidence, evidence thresholds, or decisions.
+- **Insufficient operationalization:** Broad principles may not reliably require concrete steps such as competing predictions, explicit update criteria, claim-to-evidence tracing, and post-answer overreach audits.
+- **Coarse scoring:** A single overall score can hide dimension-level improvements offset by unchanged weaknesses or trade-offs.
+- **Evaluator inconsistency / incomplete source evidence:** Some earlier cross-condition comparisons relied on summaries or unequal critique granularity; condition labels were visible. This may obscure or distort differences.
+- **Generation variance:** One response per condition cannot estimate run-to-run variation or distinguish a stable condition effect from sampling noise.
+
+No single explanation is established yet.
+
+### What the current evidence supports
+
+- Tests A and B show identical recorded scores and overlapping failure classes.
+- Test C has a similar provisional total, but its paired scoring basis requires harmonization.
+- Test D's weighted scores differ by only 0.20 points in favor of base, but the prompted transcript is incomplete in the present record.
+- The experiment currently provides **no demonstrated overall advantage** for the foundation prompt. This is not the same as demonstrating zero effect or proving the prompt is useless.
+
+### Diagnostic priority before prompt revision
+
+1. Recover complete verbatim prompted/base outputs for Tests A–D where available; mark unavailable text rather than reconstructing it from summaries.
+2. Freeze a shared, behavior-level rubric with explicit anchors. Score hypothesis diversity and discrimination, observation/inference separation, confidence calibration, evidence-proportional updating, unsupported-claim rate, and decision quality separately.
+3. Blind condition labels and score matched outputs criterion by criterion, quoting evidence from both.
+4. Run repeated generations under both conditions with identical task wording and comparable settings where feasible. Preserve each run; report distributions and uncertainty rather than treating a single pair as a stable result.
+5. Check whether the foundation changes the reasoning process's *observable products*: rankings, predictions, update thresholds, claims withdrawn, decisions, and unsupported assertions—not merely length or vocabulary.
+6. Keep the foundation prompt and IFL-0 unchanged until this baseline audit is complete. Any later intervention should be a separately versioned condition tested against the same tasks.
+
+**Current decision:** Do not declare success, failure, or revise the foundation prompt yet. The next task is matched, behavior-level rescoring and source recovery, followed by repeated paired tests if possible.
