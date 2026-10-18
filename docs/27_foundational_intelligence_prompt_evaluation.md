@@ -44,6 +44,7 @@ Core intended behavior: recognize that reality may exceed an internal representa
 | B — Psychological Integration | Interpret a status-sensitive workplace conflict | Prompted Gemini | 6.5/10 — partial pass | Coherent psychological explanation becomes asserted fact |
 | C — Epistemic Recovery | Analyze unfamiliar state transitions, then revise after new evidence | Prompted Gemini; two stages | 6.5/10 — partial pass | Familiar-framework anchoring; overstates what measurements establish |
 | D — Writing Examination | Produce and analyze a slow-burn mystery opening | Prompted Gemini | 7.5/10 — provisional | Strong prose, less reliable cost accounting and self-explanation |
+| A/B/C-Control | Repeat Tests A, B, and C unchanged on base/unprompted Gemini, without the foundational prompt | Unprompted baseline | Pending | Separates baseline task performance from possible foundation effect |
 | D-Control | Repeat Test D unchanged on a separate Gemini instance without the foundational prompt | Unprompted control | Pending | Required comparison before causal attribution |
 | E — Writing Philosophy: Social Structures and Performative Meanness | Write a socially credible status conflict and derive principles from the scene | Prompted Gemini; control optional later | Not yet run | Detect “mean cringe,” social caricature, and trade-off blindness |
 | G — Test of Garbage | User-administered adversarial test: give Gemini deliberately poor/garbage input and inspect whether it treats it as objective truth, how it pushes back, and how precisely it identifies the problem | User-run; prompt/output not yet recorded here | Pending | Overconfident acceptance, generic rejection, poor pinpointing, or failure to distinguish premise from evidence |
@@ -258,17 +259,101 @@ These are hypotheses about the *observed outputs*, not validated claims about th
 
 Counter-hypotheses must remain live. For example, ordinary epistemic caution is not itself a failure; the target is premature importation of assumptions, not indiscriminate acceptance of every unusual premise.
 
-## 12. Current State and Next Actions
+## 12. New Red Flag — Interpretive Capture After Garbage/Leading Input
+
+**Status:** Observed episode recorded; causal explanation unconfirmed.
+
+### User's report
+The user reported that an AI received a crude, leading piece of analysis about Test D and changed its tone, inflection, and evaluative stance. The supplied response accepted the preceding critique as “exact,” endorsed “fear of negative space” as the central diagnosis, attributed the writing's choices to the model “getting nervous about silence,” converted these claims into prescriptive rules for the Chapter 8 rewrite, and recommended changing project direction before the agreed control tests had been completed.
+
+### Directly observed behavior in the supplied response
+- It ratified the input's judgment before independently checking its evidential basis.
+- It treated a metaphorical account of the model's supposed motive as if it were established.
+- It converted a local literary interpretation into broad procedural rules.
+- It prescribed a project action and changed the immediate work sequence without first testing whether the diagnosis was sound.
+- It framed a proposed rewrite as a “direct A/B stress test” capable of proving calibrated restraint works, although that causal claim would require a more controlled comparison.
+
+### Interpretation
+This is consistent with possible **interpretive capture**: the model's response becomes organized around the supplied framing rather than maintaining an independent evidential stance. It may also reflect prompt/context effects, conversational style imitation, a task misunderstanding, or interaction between the foundational prompt and the immediate input. The transcript does not reveal internal mechanisms and does not establish which explanation is correct.
+
+### Why this matters
+The failure is not merely that the proposed creative advice may be bad. The more consequential issue is that the model appears to have skipped the evaluation step: it did not adequately examine the evidence, the assumptions embedded in the input, competing readings, or the costs of acting on its conclusion. It then attempted to redirect the project before the baseline tests were complete.
+
+### User-proposed mechanism: an interpretive filtration layer
+The user proposes an intermediate layer that receives a raw prompt and reconstructs it before answering. The layer would:
+1. preserve and inspect the original wording;
+2. decompose the prompt into claims, instructions, assumptions, constraints, and implied conclusions;
+3. ask explicit questions about what each sentence presupposes, what evidence supports it, what is missing, and what alternative interpretations remain;
+4. rephrase the task into a neutral, structured representation (a “simulacrum” of the task, not a replacement for the original evidence);
+5. answer the reconstructed task while retaining traceability to the original;
+6. compare the final conclusions against the original wording to detect assumptions introduced by the reconstruction.
+
+The intended principle is **neutrality toward framing, not indifference toward the user's goal**. The model should work harder when necessary and resist both agreeable and contrarian reflexes. The goal is not to make every input easier; it is to make unsupported acceptance, unjustified rejection, and premature action harder.
+
+### Assumptions and risks in the proposal
+- **Assumption 1:** The foundational prompt does not already perform this function adequately. Not yet established.
+- **Assumption 2:** A separate interpretive layer will improve performance instead of adding verbosity, latency, or another source of distortion. Not yet established.
+- **Assumption 3:** The observed style shift reflects a reasoning/evaluation failure rather than only a style change. Plausible, but needs the full prompt and full response to assess.
+- **Assumption 4:** A 7.5/10 result can be reproduced consistently. One provisional 7.5 score does not establish a stable benchmark.
+- **Risk:** A layer that automatically rewrites every prompt may silently alter intent, erase unusual but valid premises, or replace the user's task with the layer's preferred task. The reconstruction must be auditable and reversible.
+- **Risk:** “Indifference” could become generic detachment or automatic skepticism. The target is calibrated independence, not reflexive disagreement or treating all claims as equally uncertain.
+
+### Proposed testable design — not yet implemented
+Call the candidate **Interpretive Filtration Layer (IFL-0)** until a better name is chosen. This is a design hypothesis, not a validated module.
+
+**Required stages**
+1. **Raw-input preservation:** keep the prompt intact; do not silently overwrite or normalize it.
+2. **Prompt decomposition:** distinguish task, explicit constraints, factual premises, requests for judgment, implied conclusions, emotional/rhetorical cues, and ambiguous terms.
+3. **Premise audit:** mark each consequential premise as stipulated, evidenced, inferred, unsupported, contradictory, ambiguous, or unknown. Do not label a premise false merely because it is unsupported.
+4. **Question generation:** ask internally what would have to be true for each key claim to hold, what the prompt does not establish, what counterinterpretation fits, and what evidence would change the answer.
+5. **Neutral task reconstruction:** restate the actionable task in precise terms without deleting constraints or changing the user's objective. Preserve unusual premises as premises when the task asks for conditional reasoning.
+6. **Independent analysis:** solve the reconstructed task without treating the prompt's preferred conclusion as privileged.
+7. **Traceability check:** map important conclusions back to evidence and explicit instructions in the original prompt; identify any new assumptions introduced by reconstruction.
+8. **Proportionate response:** distinguish what is supported, plausible, uncertain, and unsupported. Recommend action only when the evidence and task justify it.
+9. **Final adversarial audit:** ask whether the answer would materially change if the same content were presented with the opposite emotional tone or conclusion-leading language.
+
+**Critical requirement:** Do not force the model to display every internal question in every final answer. The filtration can increase work without flooding the user with process. Its visible output should expose the assumptions and uncertainties that matter to the decision, not perform verbosity as proof of intelligence.
+
+## 13. Base Gemini Comparison — Newly Requested Plan
+
+The user now requests that **base/unprompted Gemini** receive the same **Tests A, B, and C** used for the prompted instance.
+
+### Protocol
+- Use the exact prompts from Sections 4–6, including both stages of Test C.
+- Do not add the foundational prompt.
+- Do not provide the prompted outputs, previous scores, evaluator interpretations, or hypotheses.
+- Keep model/version, session condition, date, and any system/custom instructions recorded if known.
+- Preserve the complete responses verbatim before scoring.
+- Apply the same rubric and criteria to both conditions. Do not soften or tighten the rubric after seeing the control output.
+- Score each test independently, then compare the error types—not just the numeric scores.
+- Where practical, repeat runs before making strong causal claims. The first comparison is a baseline observation, not proof that the foundational prompt caused any difference.
+
+### Comparison questions
+1. Does base Gemini separate stated facts from inferred explanations?
+2. Does it keep uncertainty alive when ranking hypotheses and recommending action?
+3. Does it distinguish a measurement or label from the interpretation attached to it?
+4. Does it revise proportionately when Test C introduces new evidence?
+5. Does it import familiar frameworks despite the explicit instruction to question their applicability?
+6. Does it overclaim what its proposed investigations can establish?
+7. Does it identify costs, alternatives, and limits, or produce a confident, tidy story?
+
+**Current status:** Test A/B/C baseline runs requested; outputs pending. The user expects base Gemini may perform poorly, but that expectation is not evidence and must not bias scoring.
+
+## 14. Current State and Next Actions
 
 - [x] Tests A–C completed on prompted Gemini.
 - [x] Test D completed on prompted Gemini and evaluated with a rubric.
 - [x] Test E prompt and evaluator rubric designed.
+- [x] Interpretive-capture episode and filtration-layer hypothesis documented.
+- [x] Base Gemini A/B/C comparison protocol documented.
 - [ ] Preserve the exact literal foundational prompt and its version identifier.
+- [ ] Run Tests A, B, and both stages of C unchanged on base/unprompted Gemini.
 - [ ] Run Test D unchanged on an unprompted Gemini control.
 - [ ] Record the user's Test G prompt and output verbatim when provided.
 - [ ] Run Test E on the prompted instance.
 - [ ] Optionally run Test E on a separate unprompted control without revealing the rubric or prompted output.
 - [ ] Compare conditions and distinguish observations from prompt-effect hypotheses.
+- [ ] Test IFL-0 as a separate condition only after a clear baseline is available; do not conflate its effects with the foundational prompt.
 - [ ] Only then decide whether the foundational prompt needs revision.
 
-**No foundational prompt upgrade is authorized by this ledger at the current stage.** The immediate goal is evidence collection and comparison, not prompt polishing.
+**No foundational prompt upgrade is authorized by this ledger at the current stage.** The immediate goal is to gather comparable evidence, test whether the filtration-layer hypothesis improves robustness, and avoid confusing an appealing mechanism with a demonstrated solution.
